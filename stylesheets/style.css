@@ -46,11 +46,18 @@ body {
 
 .h-full {
   height: calc(100vh - 4rem);
-  /* background-color: blue; */
 }
 
-.green {
-  /* background-color: green; */
+.bg-blue {
+  background-color: var(--ekko-blue);
+}
+
+.text-pink {
+  color: var(--ekko-pink);
+}
+
+.text-teal {
+  color: var(--ekko-teal);
 }
 
 .block {
@@ -417,4 +424,45 @@ body {
   font-weight: 800;
   font-size: 2.25rem;
   margin-bottom: 1em;
+}
+
+/* start-here */
+#start-here > div {
+  display: flex;
+}
+
+#start-here > div > div {
+  flex: 0 0 50%;
+}
+
+#start-here > div div:first-child {
+  background-image: url("../images/logo/ekko-logo.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 25%;
+  background-position: calc(50% / 3) calc(50% + 2rem);
+}
+
+#start-here > div div:last-child {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+}
+
+#start-here > div div:last-child > img {
+  max-width: 50%;
+}
+
+#start-here > div div:last-child > p {
+  color: var(--gray-300);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#start-here > div div:last-child > p > span {
+  font-weight: 500;
 }
