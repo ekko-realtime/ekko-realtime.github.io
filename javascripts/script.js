@@ -160,6 +160,7 @@ const throttle = (callback, wait) => {
 };
 
 // Events
+document.addEventListener("DOMContentLoaded", handleResize);
 document.addEventListener("scroll", throttle(handleScroll, 16));
 window.addEventListener("resize", throttle(handleResize, 16));
 mobileMenuButton.addEventListener("click", handlemobileMenuClick);
