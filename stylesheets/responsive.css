@@ -105,7 +105,7 @@
     --toc-width: 250px;
   }
 
-  #case-study > div {
+  #case-study-content > div {
     margin-left: var(--toc-width);
     padding: 4rem;
   }

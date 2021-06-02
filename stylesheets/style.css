@@ -281,18 +281,18 @@ body {
 }
 
 /* Case Study */
-#case-study {
+#case-study-content {
   border-bottom: 1px solid var(--gray-200);
   border-top: 1px solid var(--gray-200);
 }
 
-#case-study > div {
+#case-study-content > div {
   padding: 4rem 1rem;
 }
 
-#case-study h2::before,
-#case-study h1::before,
-#case-study h3::before {
+#case-study-content h2::before,
+#case-study-content h1::before,
+#case-study-content h3::before {
   display: block;
   content: " ";
   margin-top: -8rem;
