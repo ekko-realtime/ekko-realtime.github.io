@@ -184,6 +184,14 @@
   #start-here > div div:last-child {
     padding: 4rem;
   }
+
+  #start-here img.lg-screen {
+    display: block;
+  }
+
+  #start-here img.sm-screen {
+    display: none;
+  }
 }
 
 /* xl */

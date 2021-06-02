@@ -60,6 +60,10 @@ body {
   background-color: var(--ekko-pink);
 }
 
+.bg-gray {
+  background-color: #eee;
+}
+
 .text-pink {
   color: var(--ekko-pink);
 }
@@ -282,8 +286,8 @@ body {
 
 /* Case Study */
 #case-study-content {
-  border-bottom: 1px solid var(--gray-200);
-  border-top: 1px solid var(--gray-200);
+  /* border-bottom: 1px solid var(--gray-200);
+  border-top: 1px solid var(--gray-200); */
 }
 
 #case-study-content > div {
@@ -485,7 +489,7 @@ body {
 }
 
 #start-here > div div:last-child > p {
-  color: var(--gray-900);
+  color: var(--gray-100);
   font-size: 1.5rem;
   line-height: 2rem;
   text-align: center;
@@ -516,5 +520,15 @@ body {
 #start-here h2.sm-header {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--ekko-blue);
+  color: var(--white);
+}
+
+#start-here img.pad {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+#start-here img.lg-screen {
+  display: none;
 }
