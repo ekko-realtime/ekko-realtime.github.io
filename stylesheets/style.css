@@ -437,6 +437,7 @@ body {
 /* start-here */
 #start-here > div {
   display: flex;
+  flex-direction: column;
 }
 
 #start-here > div > div {
@@ -448,23 +449,19 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 25%;
-  background-position: calc(50% / 3) calc(50% + 2rem);
+  background-position: 50% calc(50% / 3 + 4rem);
 }
 
-#start-here .static-logo-teal-light {
-  background-image: url("../images/logo/ekko-logo-teal-light.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 25%;
-  background-position: calc(50% / 3) calc(50% + 2rem);
+#start-here div.static-logo-teal-light {
+  display: none;
 }
 
-#start-here .static-logo-pink-light {
-  background-image: url("../images/logo/ekko-logo-pink-light.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 25%;
-  background-position: calc(50% / 3) calc(50% + 2rem);
+#start-here div.static-logo-pink-light {
+  display: none;
+}
+
+#start-here .h-full {
+  height: auto;
 }
 
 #start-here > div div:last-child {
@@ -514,4 +511,10 @@ body {
   font-size: 2rem;
   font-weight: 800;
   color: var(--white);
+}
+
+#start-here h2.sm-header {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ekko-blue);
 }
