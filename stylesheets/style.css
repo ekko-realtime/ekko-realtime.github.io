@@ -52,6 +52,14 @@ body {
   background-color: var(--ekko-blue);
 }
 
+.bg-teal {
+  background-color: var(--ekko-teal);
+}
+
+.bg-pink {
+  background-color: var(--ekko-pink);
+}
+
 .text-pink {
   color: var(--ekko-pink);
 }
@@ -435,8 +443,24 @@ body {
   flex: 0 0 50%;
 }
 
-#start-here > div div:first-child {
+#start-here .static-logo-color {
   background-image: url("../images/logo/ekko-logo.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 25%;
+  background-position: calc(50% / 3) calc(50% + 2rem);
+}
+
+#start-here .static-logo-teal-light {
+  background-image: url("../images/logo/ekko-logo-teal-light.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 25%;
+  background-position: calc(50% / 3) calc(50% + 2rem);
+}
+
+#start-here .static-logo-pink-light {
+  background-image: url("../images/logo/ekko-logo-pink-light.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 25%;
@@ -452,17 +476,42 @@ body {
 }
 
 #start-here > div div:last-child > img {
+  width: 100%;
+}
+
+#start-here > div div:last-child > img.ekko {
   max-width: 50%;
 }
 
+#start-here > div div:last-child > * + * {
+  margin-top: 2rem;
+}
+
 #start-here > div div:last-child > p {
-  color: var(--gray-300);
+  color: var(--gray-900);
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-top: 2rem;
   text-align: center;
+}
+
+#start-here > div div:last-child > p.light-text {
+  color: var(--gray-300);
 }
 
 #start-here > div div:last-child > p > span {
   font-weight: 500;
+}
+
+#start-here .bg-pink,
+#start-here .bg-teal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#start-here .bg-pink h2,
+#start-here .bg-teal h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
 }
