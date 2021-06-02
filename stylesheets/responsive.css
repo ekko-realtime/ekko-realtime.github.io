@@ -180,6 +180,10 @@
   #start-here h2.sm-header {
     display: none;
   }
+
+  #start-here > div div:last-child {
+    padding: 4rem;
+  }
 }
 
 /* xl */

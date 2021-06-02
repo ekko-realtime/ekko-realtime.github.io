@@ -469,7 +469,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 #start-here > div div:last-child > img {
