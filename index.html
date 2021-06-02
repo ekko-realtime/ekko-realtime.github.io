@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- BEGIN favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-config"
+      content="images/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- END favicon -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekko</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/reset.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/responsive.css" />
+  </head>
+  <body>
+    <header class="mobile-menu-closed">
+      <div id="header">
+        <img src="images/logo/logo-name.svg" />
+        <nav>
+          <a href="#start-here" class="selected">Start Here</a>
+          <a href="#case-study">Case Study</a>
+          <a href="#presentation">Presentation</a>
+          <a href="#our-team">Our Team</a>
+          <a
+            href="https://github.com/ekko-realtime"
+            target="_blank"
+            class="icon"
+            ><i class="fab fa-github"></i
+          ></a>
+        </nav>
+        <div id="menu">
+          <button type="button">
+            <svg
+              id="mobile-open"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="mobile-close"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="header-buffer"></div>
+
+      <div id="mobile-menu">
+        <a href="#start-here" class="selected">Start Here</a>
+        <a href="#case-study">Case Study</a>
+        <a href="#presentation">Presentation</a>
+        <a href="#our-team">Our Team</a>
+        <a href="https://github.com/ekko-realtime" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+      </div>
+    </header>
+
+    <div id="start-here" class="main-section">
+      <div class="h-full">Start Here</div>
+    </div>
+
+    <aside id="toc">
+      <ul>
+        <li data-section="ekko-101">
+          <a href="#ekko-101">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Ekko 101</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="realtime-web-applications">
+          <a href="#realtime-web-applications">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Realtime Web Applications</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="how-is-realtime-implemented">
+          <a href="#how-is-realtime-implemented">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>How is Realtime Implemented</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="how-is-realtime-implemented" class="subitem">
+          <a href="#pulling-data">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Data Transfer Patterns: Pulling Data</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="how-is-realtime-implemented" class="subitem">
+          <a href="#pushing-data">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Data Transfer Patterns: Pushing Data</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="dedicated-infrastructure-for-realtime">
+          <a href="#dedicated-infrastructure-for-realtime">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Dedicated Infrastructure for Realtime</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="realtime-middleware">
+          <a href="#realtime-middleware">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Realtime Middleware</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="why-we-built-ekko">
+          <a href="#why-we-built-ekko">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Why We Built Ekko</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="using-ekko">
+          <a href="#using-ekko">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Using Ekko</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="engineering-challenges">
+          <a href="#engineering-challenges">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Engineering Challenges</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="load-testing-ekko">
+          <a href="#load-testing-ekko">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Load Testing Ekko</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="future-work">
+          <a href="#future-work">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Future Work</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="conclusion">
+          <a href="#conclusion">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Conclusion</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="further-reading">
+          <a href="#further-reading">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Further Reading</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div id="case-study" class="main-section">
+      <div class="prose">
+        <h1>Case Study</h1>
+
+        <h2 id="ekko-101" class="toc-target">Ekko 101</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="realtime-web-applications" class="toc-target">
+          Realtime Web Applications
+        </h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="how-is-realtime-implemented" class="toc-target">
+          How is Realtime Implemented
+        </h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h3 id="pulling-data" class="toc-target">
+          Data Transfer Patterns: Pulling Data
+        </h3>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h3 id="pushing-data" class="toc-target">
+          Data Transfer Patterns: Pushing Data
+        </h3>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="dedicated-infrastructure-for-realtime" class="toc-target">
+          Dedicated Infrastructure for Realtime
+        </h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="realtime-middleware" class="toc-target">Realtime Middleware</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="why-we-built-ekko" class="toc-target">Why We Built Ekko</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="using-ekko" class="toc-target">Using Ekko</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="engineering-challenges" class="toc-target">
+          Engineering Challenges
+        </h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="load-testing-ekko" class="toc-target">Load Testing Ekko</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="future-work" class="toc-target">Future Work</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="conclusion" class="toc-target">Conclusion</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+
+        <h2 id="further-reading" class="toc-target">Further Reading</h2>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+        <p>TEXT</p>
+      </div>
+    </div>
+
+    <div id="presentation" class="main-section">
+      <div>
+        <h2>Presentation</h2>
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/L-rbSRf2BrU?rel=0&controls=0&showinfo=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="our-team" class="main-section">
+      <div>
+        <div>
+          <div>
+            <h2>Meet our team</h2>
+            <p class="text-xl text-gray-300">
+              We are currently looking for opportunities. If you liked what you
+              saw and want to talk more, please reach out!
+            </p>
+          </div>
+          <ul class="people">
+            <li class="profile">
+              <img
+                class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                src="images/team/as.jpg"
+                alt=""
+              />
+              <div>
+                <div>
+                  <h3>Alex Strick van Linschoten</h3>
+                  <p>London, UK</p>
+                </div>
+
+                <ul class="social">
+                  <li>
+                    <a href="mailto:alexstrick@fastmail.com" target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/strickvl/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/strickvl" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://www.alexstrick.com/" target="_blank"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="profile">
+              <img
+                class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                src="images/team/dm.jpg"
+                alt=""
+              />
+              <div>
+                <div>
+                  <h3>Dorey Miller</h3>
+                  <p>Seattle, WA, USA</p>
+                </div>
+
+                <ul class="social">
+                  <li>
+                    <a href="mailto:dorey.edinger@gmail.com" target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/dorey-miller/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/doreymiller" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://doreymiller.github.io/" target="_blank"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="profile">
+              <img
+                class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                src="images/team/dh.jpg"
+                alt=""
+              />
+              <div>
+                <div>
+                  <h3>Drew Hollbrook</h3>
+                  <p>Crested Butte, CO, USA</p>
+                </div>
+
+                <ul class="social">
+                  <li>
+                    <a href="mailto:drewholbrook@gmail.com" target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/drew-holbrook-54070517/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dpholbrook" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://dpholbrook.github.io/" target="_blank"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="profile">
+              <img
+                class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                src="images/team/wl.jpg"
+                alt=""
+              />
+              <div>
+                <div>
+                  <h3>Will Lotherington</h3>
+                  <p>San Francisco, CA, USA</p>
+                </div>
+
+                <ul class="social">
+                  <li>
+                    <a href="mailto:will.lotherington@hey.com" target="_blank"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/wlotherington/"
+                      target="_blank"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/wLotherington" target="_blank"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://wlotherington.com/" target="_blank"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascripts/script.js"></script>
+  </body>
+</html>
