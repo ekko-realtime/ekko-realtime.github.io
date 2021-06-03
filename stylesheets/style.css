@@ -311,6 +311,21 @@ body {
   color: var(--ekko-blue);
 }
 
+.prose a {
+  color: #4c74b9;
+  text-decoration: underline !important;
+  text-decoration-color: #d2dcee !important;
+  transition: all 0.3s ease;
+}
+
+.prose a:hover {
+  text-decoration-color: #829dce !important;
+}
+
+.prose blockquote {
+  border-left: 0.25rem solid var(--gray-200);
+}
+
 /* Our Team */
 #our-team > div {
   background-color: var(--gray-900);

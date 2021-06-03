@@ -20,6 +20,16 @@ const handleScroll = () => {
 
 const handleResize = () => {
   handleProseSize();
+  handleMainSectionSelection();
+  handleTocVisibility();
+  handleTocSelection();
+};
+
+const handlePageLoad = () => {
+  handleProseSize();
+  handleMainSectionSelection();
+  handleTocVisibility();
+  handleTocSelection();
 };
 
 const handleProseSize = () => {
@@ -160,7 +170,7 @@ const throttle = (callback, wait) => {
 };
 
 // Events
-document.addEventListener("DOMContentLoaded", handleResize);
+document.addEventListener("DOMContentLoaded", handlePageLoad);
 document.addEventListener("scroll", throttle(handleScroll, 16));
 window.addEventListener("resize", throttle(handleResize, 16));
 mobileMenuButton.addEventListener("click", handlemobileMenuClick);
