@@ -290,6 +290,10 @@ body {
   border-top: 1px solid var(--gray-200); */
 }
 
+#case-study-content img {
+  max-width: 100%;
+}
+
 #case-study-content > div {
   padding: 4rem 1rem;
 }
