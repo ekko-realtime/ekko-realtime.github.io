@@ -551,3 +551,7 @@ body {
 #start-here img.lg-screen {
   display: none;
 }
+
+#case-study img {
+  width: 700px;
+}
