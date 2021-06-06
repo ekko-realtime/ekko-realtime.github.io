@@ -51,8 +51,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ekko</title>
-    
-    <link rel="preconnect" href="https://e1zswm27.cdn.imgeng.in">
+
+    <link rel="preconnect" href="https://e1zswm27.cdn.imgeng.in" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -140,7 +140,10 @@
             class="ekko sm-screen"
             src="https://e1zswm27.cdn.imgeng.in/images/logo/logo-name-vertical.png"
           />
-          <img class="ekko lg-screen" src="https://e1zswm27.cdn.imgeng.in/images/logo/ekko-name-white.png" />
+          <img
+            class="ekko lg-screen"
+            src="https://e1zswm27.cdn.imgeng.in/images/logo/ekko-name-white.png"
+          />
 
           <p class="light-text">
             An open-source framework that<br />provides
@@ -176,50 +179,77 @@
             Ekko Functions are serverless functions that can be customized for
             your realtime needs and reused across applications.
           </p>
-          <img class="pad" src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif" />
+          <img
+            class="pad"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif"
+          />
         </div>
       </div>
     </div>
 
     <aside id="toc">
       <ul>
-        <li data-section="ekko-101">
-          <a href="#ekko-101">
+        <li data-section="section-1">
+          <a href="#section-1">
             <div>
               <div class="bullet"><div></div></div>
               <p>Ekko 101</p>
             </div>
           </a>
         </li>
-        <li data-section="realtime-web-applications">
-          <a href="#realtime-web-applications">
+        <li data-section="section-2">
+          <a href="#section-2">
             <div>
               <div class="bullet"><div></div></div>
               <p>Realtime Web Applications</p>
             </div>
           </a>
         </li>
-        <li data-section="how-is-realtime-implemented">
-          <a href="#how-is-realtime-implemented">
+        <li data-section="section-2" class="subitem">
+          <a href="#section-2-1">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Realtime Applications are Everywhere</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="section-2" class="subitem">
+          <a href="#section-2-2">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Perceived as Instantaneous</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="section-3">
+          <a href="#section-3">
             <div>
               <div class="bullet"><div></div></div>
               <p>How is Realtime Implemented</p>
             </div>
           </a>
         </li>
-        <li data-section="how-is-realtime-implemented" class="subitem">
-          <a href="#pulling-data">
+        <li data-section="section-3" class="subitem">
+          <a href="#section-3-1">
             <div>
               <div class="bullet"><div></div></div>
               <p>Data Transfer Patterns: Pulling Data</p>
             </div>
           </a>
         </li>
-        <li data-section="how-is-realtime-implemented" class="subitem">
-          <a href="#pushing-data">
+        <li data-section="section-3" class="subitem">
+          <a href="#section-3-2">
             <div>
               <div class="bullet"><div></div></div>
               <p>Data Transfer Patterns: Pushing Data</p>
+            </div>
+          </a>
+        </li>
+        <li data-section="section-3" class="subitem">
+          <a href="#section-3-3">
+            <div>
+              <div class="bullet"><div></div></div>
+              <p>Messaging Pattern: 1:1 Pub/Sub</p>
             </div>
           </a>
         </li>
@@ -303,73 +333,179 @@
         <div class="prose">
           <h1>Case Study</h1>
 
-          <h2 id="ekko-101">Ekko 101</h2>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-
-          <h2 id="realtime-web-applications">Realtime Web Applications</h2>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-
-          <h2 id="how-is-realtime-implemented">How is Realtime Implemented</h2>
+          <h2 id="section-1">1. Ekko 101</h2>
           <p>
-            There is a lot of test text... and then there is an inline
-            <a href="">Test Link </a> that seems to look fine here
+            Ekko is an open source tool that developers can use to deploy their
+            own realtime infrastructure. This infrastructure can manage realtime
+            messages for several web applications and provide custom, in-transit
+            message processing. Using our command-line tool to spin up Ekko’s
+            infrastructure is a smooth process, as is deploying serverless
+            functions to process your messages as they pass through the realtime
+            system. Our framework is open-source, offering flexibility and
+            modularity for your realtime needs.
+          </p>
+          <p>
+            Ekko is a realtime message processing framework. With Ekko,
+            developers can easily self deploy realtime infrastructure and create
+            realtime applications. Custom realtime middleware can be deployed
+            for applications that require in transit message processing.
+          </p>
+          <p>
+            In this case study, we describe the engineering problem that Ekko
+            solves, that of realtime in-transit message processing. We
+            demonstrate how Ekko works and explain some of the key technical
+            challenges we encountered. Before we get into those details, we want
+            to explain the problem that we sought to address.
+          </p>
+
+          <h2 id="section-2">2. Realtime Web Applications</h2>
+          <h3 id="section-2-1">2.1 Realtime Applications are Everywhere</h3>
+          <p>
+            Realtime web applications, or realtime components within bigger
+            monolithic applications, are everywhere.
+          </p>
+          <img src="images/diagrams/realtime-is-everywhere.png" />
+          <p>
+            Any live data dashboards, such as stock prices ticking up and down
+            on a website, are examples of realtime web applications. Similarly,
+            if you open the Uber app and you see your driver’s car location
+            moving around on the screen. The same applies to simple chat
+            applications where you’re talking back and forth and you see
+            messages as soon as they’re sent to you.
+          </p>
+          <p>
+            These are all very common examples of realtime web applications that
+            we see and use every day. In short, users want to automatically get
+            information updates (like messages or geo-locations) without
+            requesting those updates. We see more dynamic and responsive
+            applications being created with the use of these realtime
+            technologies, and alongside that we see application users
+            increasingly expecting realtime data.
+          </p>
+          <h3 id="section-2-2">2.2 Perceived as Instantaneous</h3>
+          <p>
+            In the context of web applications, realtime relates to what the
+            user perceives as happening ‘in real time’.
+          </p>
+          <p>
+            How fast do interactions need to be in order to be perceived as
+            realtime? "Anything under 100 milliseconds," and "anything within a
+            few hundred milliseconds," are the most common statements you'll
+            find when looking into realtime within the context of web
+            applications. (Both of these statements stem from
+            <a
+              href="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6938f6eb-d1de-4d66-8e89-f4e8b80b5222/Miller1968.pdf"
+              target="_blank"
+              >Robert Miller’s 1968 paper</a
+            >, "Response time in man-computer conversational transactions”.)
+          </p>
+          <img src="images/diagrams/what-is-realtime.gif" />
+          <p>
+            As one of the leading service providers in the realtime space,
+            PubNub,
+            <a
+              href="https://www.pubnub.com/blog/comprehensive-guide-realtime-tech-stack/"
+              target="_blank"
+              >has stated</a
+            >:
           </p>
           <blockquote>
-            Test Block Quote Test Block Quote Test Block Quote Test Block Quote
-            Test Block Quote Test Block Quote Test Block Quote Test Block Quote
-            Test Block Quote
+            “In almost all cases, a realtime interaction has a human angle,
+            because one of the collaborators in any realtime data exchange is
+            always a human. Even in a machine to machine interaction, there is a
+            human sitting at the back, receiving feedback. Hence the human
+            perception of a realtime event is very important.”
           </blockquote>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
+          <p>
+            The meaning of realtime is different in industries such as
+            healthcare and aerospace -- so-called ‘hard’ realtime -- where it is
+            specifically used to refer to systems that human lives can depend
+            on. This is not the type of realtime that we are addressing.
+            Instead, we are focusing on realtime web applications which are
+            specifically concerned with the user’s perception of
+            “instantaneous.”
+          </p>
+          <p>
+            Next, let's consider some of the most common communication patterns
+            for realtime web applications.
+          </p>
 
-          <h3 id="pulling-data">Data Transfer Patterns: Pulling Data</h3>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
+          <h2 id="section-3">3. How is Realtime Implemented</h2>
+          <p>
+            There are many ways to implement realtime in an application. In this
+            section, we will explore a common way to achieve realtime
+            functionality for an app with many publishers and many subscribers.
+          </p>
 
-          <h3 id="pushing-data">Data Transfer Patterns: Pushing Data</h3>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
-          <p>TEXT</p>
+          <h3 id="section-3-1">3.1 Data Transfer Patterns: Pulling Data</h3>
+          <p>
+            At the bedrock of web communication we have traditional HTTP request
+            response cycles, and along with it the idea of pulling data.
+          </p>
+          <img src="images/diagrams/data-pull.gif" />
+          <p>
+            When you pull data, you have data that lives in a database
+            somewhere. This data isn’t retrieved until a client explicitly makes
+            a request for the data, at which point the server responds.
+          </p>
+          <p>
+            As we mentioned before, realtime applications automatically update
+            users, without the user requesting the update. So, realtime apps
+            tend not to use a data pull pattern.
+          </p>
+
+          <h3 id="section-3-2">3.2 Data Transfer Patterns: Pushing Data</h3>
+          <p>The pull pattern is distinct from the push pattern.</p>
+          <img src="images/diagrams/data-push.gif" />
+          <p>
+            In the data push pattern, the client often starts with an initial
+            request but it keeps that connection open. Now whenever new data is
+            generated, it is immediately sent, or “pushed”, to the client over
+            the open connection.
+          </p>
+          <p>
+            This is the data transfer pattern that realtime applications use:
+            users receive updates automatically, without requesting them.
+          </p>
+          <p>
+            With realtime web applications, we also start to shift away from a
+            strict server-client model. The server-client model primarily
+            focuses on the actual hardware being used, whereas with realtime web
+            applications it is more common to focus on the purposes for which
+            the hardware is being used.
+          </p>
+          <p>
+            The Pub/Sub model is commonly used to describe the broad set of
+            behaviours associated with this data push pattern.
+          </p>
+
+          <h3 id="section-3-3">3.3 Messaging Pattern: 1:M Pub/Sub</h3>
+          <p>
+            Within the Pub/Sub pattern, you will see that we no longer model
+            things in terms of servers and clients. We now have ‘publishers’ and
+            ‘subscribers’, and the pattern is focused specifically on their
+            actual roles in the interaction.
+          </p>
+          <img src="images/diagrams/pubsub-1.gif" />
+          <p>
+            We represent them both as browsers on iPads, but the actual hardware
+            doesn’t really matter. Anything that was traditionally a server or a
+            client can act as a publisher or a subscriber.
+          </p>
+          <p>
+            Within the Pub/Sub model we no longer talk about data being stored
+            or data being sent. Instead we think about data in terms of messages
+            being sent from publishers to subscribers. Those messages, in turn,
+            are sent or published to ‘channels’; in some contexts these are
+            referred to as ‘topics’, ‘queues’, or ‘rooms’.
+          </p>
+          <p>
+            Above is an example of a one-to-one Pub/Sub pattern. We have a
+            single publisher generating messages and sending them to a single
+            subscriber. If we take this example one step further, we can see
+            that the Pub/Sub model can also be used for one to many messaging.
+          </p>
+          <img src="images/diagrams/pubsub-2.gif" />
 
           <h2 id="dedicated-infrastructure-for-realtime">
             Dedicated Infrastructure for Realtime
@@ -481,115 +617,280 @@
           <p>TEXT</p>
           <p>TEXT</p>
           <p>associationsjson.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/associationsjson.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/associationsjson.png"
+          />
           <p>bad-actor-1.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/bad-actor-1.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/bad-actor-1.gif"
+          />
           <p>bad-actor-2.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/bad-actor-2.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/bad-actor-2.gif"
+          />
           <p>brands.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/brands.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/brands.png"
+          />
           <p>cdk.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/cdk.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/cdk.png"
+          />
           <p>chaining.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/chaining.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/chaining.gif"
+          />
           <p>cli-deploys.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/cli-deploys.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/cli-deploys.png"
+          />
           <p>current-options.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/current-options.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/current-options.png"
+          />
           <p>data-pull.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/data-pull.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/data-pull.gif"
+          />
           <p>data-push.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/data-push.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/data-push.gif"
+          />
           <p>existing-solutions.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/existing-solutions.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/existing-solutions.png"
+          />
           <p>infrastructure-1.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-1.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-1.png"
+          />
           <p>infrastructure-2.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-2.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-2.gif"
+          />
           <p>infrastructure-3.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif"
+          />
           <p>infrastructure-3.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3.gif"
+          />
           <p>infrastructure-3b.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3b.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure-3b.gif"
+          />
           <p>infrastructure.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/infrastructure.png"
+          />
           <p>linking.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/linking.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/linking.gif"
+          />
           <p>loadtest-1.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-1.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-1.png"
+          />
           <p>loadtest-2.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-2.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-2.png"
+          />
           <p>loadtest-3.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-3.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-3.png"
+          />
           <p>loadtest-4.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-4.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-4.png"
+          />
           <p>loadtest-5.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-5.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/loadtest-5.png"
+          />
           <p>middleware-reuse.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-reuse.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-reuse.gif"
+          />
           <p>middleware-scaling.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-scaling.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-scaling.gif"
+          />
           <p>middleware-where-1.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-1.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-1.png"
+          />
           <p>middleware-where-2.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-2.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-2.png"
+          />
           <p>middleware-where-3.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-3.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-3.png"
+          />
           <p>middleware-where-4.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-4.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/middleware-where-4.png"
+          />
           <p>options.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/options.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/options.png"
+          />
           <p>parts.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/parts.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/parts.png"
+          />
           <p>protocols.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/protocols.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/protocols.png"
+          />
           <p>pubsub-1.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-1.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-1.gif"
+          />
           <p>pubsub-2.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-2.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-2.gif"
+          />
           <p>pubsub-3.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-3.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-3.png"
+          />
           <p>pubsub-4.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-4.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-4.gif"
+          />
           <p>pubsub-5.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-5.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/pubsub-5.gif"
+          />
           <p>put-fail.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/put-fail.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/put-fail.gif"
+          />
           <p>put-work.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/put-work.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/put-work.gif"
+          />
           <p>realtime-categories.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/realtime-categories.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/realtime-categories.png"
+          />
           <p>realtime-is-everywhere.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/realtime-is-everywhere.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/realtime-is-everywhere.png"
+          />
           <p>realtime-service.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/realtime-service.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/realtime-service.png"
+          />
           <p>recognized-need.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/recognized-need.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/recognized-need.gif"
+          />
           <p>scaling.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/scaling.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/scaling.png"
+          />
           <p>separate-realtime-1.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/separate-realtime-1.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/separate-realtime-1.gif"
+          />
           <p>separate-realtime-2.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/separate-realtime-2.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/separate-realtime-2.gif"
+          />
           <p>serverless-functions.png</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/serverless-functions.png" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/serverless-functions.png"
+          />
           <p>updating-associations-cloudwatch.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/updating-associations-cloudwatch.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/updating-associations-cloudwatch.gif"
+          />
           <p>updating-associations-put.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/updating-associations-put.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/updating-associations-put.gif"
+          />
           <p>upload.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/upload.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/upload.gif"
+          />
           <p>what-is-realtime.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/what-is-realtime.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/what-is-realtime.gif"
+          />
           <p>ws-fail.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-fail.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-fail.gif"
+          />
           <p>ws-problem.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-problem.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-problem.gif"
+          />
           <p>ws-solution.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-solution.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-solution.gif"
+          />
           <p>ws-work.gif</p>
-          <img loading=lazy src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-work.gif" />
+          <img
+            loading="lazy"
+            src="https://e1zswm27.cdn.imgeng.in/images/diagrams/ws-work.gif"
+          />
         </div>
       </div>
     </div>
