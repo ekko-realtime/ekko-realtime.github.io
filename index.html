@@ -502,12 +502,6 @@
             modularity for your realtime needs.
           </p>
           <p>
-            Ekko is a realtime message processing framework. With Ekko,
-            developers can easily self deploy realtime infrastructure and create
-            realtime applications. Custom realtime middleware can be deployed
-            for applications that require in transit message processing.
-          </p>
-          <p>
             In this case study, we describe the engineering problem that Ekko
             solves, that of realtime in-transit message processing. We
             demonstrate how Ekko works and explain some of the key technical
@@ -528,14 +522,14 @@
           />
           <p>
             Any live data dashboards, such as stock prices ticking up and down
-            on a website, are examples of realtime web applications. Similarly,
+            on a website, are examples of realtime web applications. The same applies
             if you open the Uber app and you see your driver’s car location
-            moving around on the screen. The same applies to simple chat
+            moving around on the screen, or to simple chat
             applications where you’re talking back and forth and you see
             messages as soon as they’re sent to you.
           </p>
           <p>
-            These are all very common examples of realtime web applications that
+            These are all very common examples of realtime applications that
             we see and use every day. In short, users want to automatically get
             information updates (like messages or geo-locations) without
             requesting those updates. We see more dynamic and responsive
@@ -818,11 +812,7 @@
             At first, a realtime service can be scaled vertically, adding more
             compute power to the existing server. But, at a certain point,
             vertical scaling reaches a limit and becomes financially infeasible.
-          </p>
-          <p>
-            Your service could also grow larger than what is possible to support
-            on a single instance. Now, the only option is to horizontally scale
-            the realtime service.
+            Now, the only option is to horizontally scale the realtime service.
           </p>
           <p>
             A horizontally scaled realtime service introduces new problems as a
@@ -1150,8 +1140,8 @@
             don’t have to worry about paying for idle compute resources.
           </p>
           <p>
-            It’s worth noting the limitations of serverless functions. They
-            aren’t a silver bullet, however. They aren’t ideal for processes
+            It’s worth noting the limitations of serverless functions; they
+            aren’t a silver bullet. They aren’t ideal for processes
             requiring large amounts of compute; there are maximums for length of
             compute and size of payload. They also add some complexity to the
             infrastructure and as a result can be harder to test and debug. They
@@ -1429,7 +1419,7 @@
           <!-- Section 8 -->
           <h2 id="section-8">8. Engineering Challenges</h2>
           <p>
-            We faced three main engineering challenges when building Ekko: how
+            We faced several engineering challenges when building Ekko: how
             to authenticate clients connecting to our server, how to associate
             individual Ekko Functions with specific realtime channels, and how
             to scale the infrastructure.
@@ -1576,17 +1566,6 @@
             handle the complexity of writing extremely long CloudFormation
             templates from scratch and instead to define the infrastructure
             'constructs' we wanted to provision.
-          </p>
-          <p>
-            The tradeoffs of having a measure of 'lock-in' with AWS were, on
-            balance, reasonable given that our entire infrastructure stack lives
-            on AWS. Moreover, we found that CDK code could be quite functionally
-            expressive, even when a lot of complexity and configurability was
-            effectively hidden inside the 'constructs' we were defining and/or
-            the AWS documentation. We were able to abstract away the need for
-            contact with the CDK deployment workflow through how we created the
-            CLI tool; developers do not need to know what is going on
-            'underneath the hood' here.
           </p>
           <h4 id="section-8-3-2">8.3.2 Scaling the Ekko Server</h4>
           <p>
@@ -1800,13 +1779,9 @@
             clients. This resulted in Ekko Server sending 10,000 messages per
             second for 100 seconds, totalling in 1,000,000 messages. This was
             more than enough to justify the chat app use case and Ekko Server
-            only reached 50% CPU usage.
+            only reached 50% CPU usage so we remained within reasonable ranges.
           </p>
           <img class="lazy" data-src="images/diagrams/loadtest-5.png" />
-          <p>
-            We concluded that Ekko can handle loads required for realtime
-            message processing and management.
-          </p>
           <p>
             During our tests, ECS did scale up Ekko Server instances according
             to the scaling policies defined by our CDK code. However, it became
