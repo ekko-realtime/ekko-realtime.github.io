@@ -703,7 +703,7 @@
           <p>
             So far we have only seen examples of clients being a publisher or a
             subscriber, but within realtime web applications it is very common
-            for devices to be both publishers and subscribers.
+            for devices to be <em>both</em> publishers and subscribers.
           </p>
           <img class="lazy" data-src="images/diagrams/pubsub-5.gif" />
           <p>
@@ -779,6 +779,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/separate-realtime-1.gif"
+            width="270"
           />
           <p>
             The initial response might be to vertically scale, adding more
@@ -791,6 +792,7 @@
           <img
             class="lazy"
             data-src="images/diagrams/separate-realtime-2.gif"
+            width="570"
           />
           <p>
             Treating realtime as a separate service becomes increasingly
@@ -969,6 +971,7 @@
             >
             emerge with how their customers were using their services.
           </p>
+          <img class="lazy" data-src="images/diagrams/recognized-need.gif" />
           <p>
             Recall that PubNub and Ably’s services allow customers to decouple
             their application infrastructure from their realtime infrastructure
@@ -988,7 +991,6 @@
             process and then republish back out... so, this [PubNub Functions]
             is absolutely required." (PubNub CEO, Todd Greene)
           </blockquote>
-          <img class="lazy" data-src="images/diagrams/recognized-need.gif" />
           <h3 id="section-5-3">5.3 Existing Solutions</h3>
           <p>
             PubNub and Ably set out to solve this problem by offering realtime
@@ -1033,13 +1035,13 @@
             provider could put realtime middleware:
           </p>
           <ol>
-            <li>In the client side code</li>
-            <li>In the server side code</li>
+            <li>In the client-side code</li>
+            <li>In the server-side code</li>
             <li>On a dedicated server for realtime middleware</li>
             <li>In Serverless Functions</li>
           </ol>
           <img class="lazy" data-src="images/diagrams/middleware-where-1.png" />
-          The first option, putting realtime middleware in client side code, is
+          The first option, putting realtime middleware in client-side code, is
           a nonstarter. Putting business logic in client-side code is not a good
           practice because it introduces performance problems and security
           concerns. In the
@@ -1048,7 +1050,7 @@
             target="_blank"
             >words</a
           >
-          of PubNub founder Sephen Blum
+          of PubNub founder Stephen Blum
           <blockquote>
             “You want that code to execute in a trusted environment, not on a
             client mobile device, which is uninterested code execution, because
@@ -1244,9 +1246,9 @@
           <p>There are four main parts to Ekko:</p>
           <ul>
             <li>Ekko Server</li>
-            <li>Ekko Client</li>
             <li>Ekko Functions</li>
             <li>Ekko CLI</li>
+            <li>Ekko Client</li>
           </ul>
           <img class="lazy" data-src="images/diagrams/parts.png" />
           <p>
