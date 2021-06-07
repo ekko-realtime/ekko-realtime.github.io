@@ -331,6 +331,30 @@ body {
   border-left: 0.25rem solid var(--gray-200);
 }
 
+.prose em {
+  font-style: italic;
+}
+
+/* #case-study img {
+  width: 700px;
+} */
+
+.prose code {
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.375rem;
+  line-height: 1.5rem;
+}
+
+.prose code:before,
+.prose code:after {
+  content: "";
+}
+
 /* Our Team */
 #our-team > div {
   background-color: var(--gray-900);
@@ -552,11 +576,3 @@ body {
 #start-here img.lg-screen {
   display: none;
 }
-
-/* #case-study img {
-  width: 700px;
-} */
-
-/* #case-study code {
-  font-family: monospace;
-} */
