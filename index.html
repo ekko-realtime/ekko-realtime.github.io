@@ -492,14 +492,13 @@
           <!-- Section 1 -->
           <h2 id="section-1">1. Ekko 101</h2>
           <p>
-            Ekko is an open-source tool that developers can use to deploy their
-            own realtime infrastructure. This infrastructure can manage realtime
-            messages for several web applications and provide custom, in-transit
-            message processing. Using our command-line tool to spin up Ekko’s
-            infrastructure is a smooth process, as is deploying serverless
-            functions to process your messages as they pass through the realtime
-            system. Our framework is open-source, offering flexibility and
-            modularity for your realtime needs.
+            Ekko is an open-source framework that allows developers to easily
+            deploy realtime infrastructure for their applications. Custom
+            serverless functions provide a flexible, modular way to process
+            messages as they pass through the realtime system. It is easy to use
+            our command-line tool to spin up Ekko’s infrastructure, as is
+            deploying serverless functions to process any messages that pass
+            through the realtime system.
           </p>
           <p>
             In this case study, we describe the engineering problem that Ekko
@@ -522,15 +521,15 @@
           />
           <p>
             Any live data dashboards, such as stock prices ticking up and down
-            on a website, are examples of realtime web applications. The same applies
-            if you open the Uber app and you see your driver’s car location
-            moving around on the screen, or to simple chat
-            applications where you’re talking back and forth and you see
-            messages as soon as they’re sent to you.
+            on a website, are examples of realtime web applications. The same
+            applies if you open the Uber app and you see your driver’s car
+            location moving around on the screen, or to simple chat applications
+            where you’re talking back and forth and you see messages as soon as
+            they’re sent to you.
           </p>
           <p>
-            These are all very common examples of realtime applications that
-            we see and use every day. In short, users want to automatically get
+            These are all very common examples of realtime applications that we
+            see and use every day. In short, users want to automatically get
             information updates (like messages or geo-locations) without
             requesting those updates. We see more dynamic and responsive
             applications being created with the use of these realtime
@@ -624,12 +623,10 @@
             users receive updates automatically, without requesting them.
           </p>
           <p>
-            With realtime web applications, we also start to shift away from a
-            strict server-client model. The server-client model primarily
-            focuses on the actual hardware being used, whereas with realtime web
-            applications it is more common to focus on the purposes for which
-            the hardware is being used.
+            The Pub/Sub model is commonly used to describe the broad set of
+            behaviors associated with this data push pattern.
           </p>
+
           <p>
             The Pub/Sub model is commonly used to describe the broad set of
             behaviours associated with this data push pattern.
@@ -701,9 +698,10 @@
             3.7 Messaging Pattern: Bi-directional Pub/Sub
           </h3>
           <p>
-            So far we have only seen examples of clients being a publisher <em>or</em> a
-            subscriber, but within realtime web applications it is very common
-            for devices to be <em>both</em> publishers and subscribers.
+            So far we have only seen examples of clients being a publisher
+            <em>or</em> a subscriber, but within realtime web applications it is
+            very common for devices to be <em>both</em> publishers and
+            subscribers.
           </p>
           <img class="lazy" data-src="images/diagrams/pubsub-5.gif" />
           <p>
@@ -747,15 +745,11 @@
             <a href="https://socket.io" target="_blank">SocketIO</a>.
           </p>
           <p>
-            As for infrastructure, the next section will make the case for why
-            it’s best to have infrastructure dedicated to your realtime needs.
-          </p>
-          <p>
             The Pub/Sub hub outlined above has the complicated task of managing
-            realtime connections and messages for many publishers and
-            subscribers. In the next section, we will make the case for why it’s
-            best to have dedicated infrastructure for this purpose and explain
-            why this infrastructure is often provided by a third party.
+            WebSocket connections and messages for many publishers and
+            subscribers. In the next section, we will explain why this Pub/Sub
+            hub should be treated as a separate service that is often provided
+            by a third party.
           </p>
 
           <!-- Section 4 -->
@@ -1042,8 +1036,8 @@
           </ol>
           <img class="lazy" data-src="images/diagrams/middleware-where-1.png" />
           The first option, putting realtime middleware in client-side code, is
-          a non-starter. Putting business logic in client-side code is not a good
-          practice because it introduces performance problems and security
+          a non-starter. Putting business logic in client-side code is not a
+          good practice because it introduces performance problems and security
           concerns. In the
           <a
             href="https://softwareengineeringdaily.com/wp-content/uploads/2018/04/SED554-Pubsub-Infrastructure.pdf"
@@ -1143,9 +1137,9 @@
           </p>
           <p>
             It’s worth noting the limitations of serverless functions; they
-            aren’t a silver bullet. They aren’t ideal for processes
-            requiring large amounts of compute; there are maximums for length of
-            compute and size of payload. They also add some complexity to the
+            aren’t a silver bullet. They aren’t ideal for processes requiring
+            large amounts of compute; there are maximums for length of compute
+            and size of payload. They also add some complexity to the
             infrastructure and as a result can be harder to test and debug. They
             live on servers with other people's code so there can be security
             concerns. Since they are ephemeral, any initial execution can have a
@@ -1363,32 +1357,35 @@
             To process realtime messages in transit, Ekko Functions need to be
             deployed to AWS Lambda. When the Ekko infrastructure is deployed
             with the <code>ekko init</code> command, it creates an
-          <code>ekko/ekko_functions</code> directory locally. From this directory,
-            <code>create</code>, <code>update</code>, <code>deploy</code>, and
-            <code>destroy</code> commands can be run to manage Ekko Functions.
+            <code>ekko/ekko_functions</code> directory locally. From this
+            directory, <code>create</code>, <code>update</code>,
+            <code>deploy</code>, and <code>destroy</code> commands can be run to
+            manage Ekko Functions.
           </p>
           <p>
             Ekko Functions are created with a default file structure and format
             so that they can be deployed to AWS Lambda. These functions can be
             as simple as the example below, or a complex program with multiple
             files. In this example, the demo-angry function exists in an
-          <code>index.js</code> file and simply takes the message payload, capitalizes the
-            text, and adds a few exclamation points.
+            <code>index.js</code> file and simply takes the message payload,
+            capitalizes the text, and adds a few exclamation points.
           </p>
           <img class="lazy" data-src="images/diagrams/angry.png" />
           <p>
             Once Ekko Functions are created, they can easily be deployed to AWS
-            Lambda with the <code>ekko deploy</code> command. After Ekko Functions have been
-            deployed, the <code>associations.json</code> file in the <code>ekko_functions</code> directory
-            needs to be manually updated.
+            Lambda with the <code>ekko deploy</code> command. After Ekko
+            Functions have been deployed, the
+            <code>associations.json</code> file in the
+            <code>ekko_functions</code> directory needs to be manually updated.
           </p>
           <img class="lazy" data-src="images/diagrams/associationsjson.png" />
           <p>
-          <code>associations.json</code> informs the server what functions it should use
-            for processing messages published to a specific channel. Once this
-            file has been updated, the <code>ekko update associations.json</code> command can
-            be run which stores the file on the S3 bucket mentioned earlier, and
-            caches it on the Ekko Server.
+            <code>associations.json</code> informs the server what functions it
+            should use for processing messages published to a specific channel.
+            Once this file has been updated, the
+            <code>ekko update associations.json</code> command can be run which
+            stores the file on the S3 bucket mentioned earlier, and caches it on
+            the Ekko Server.
           </p>
           <h3 id="section-7-5">7.5 Transforming Messages in Realtime</h3>
           <p>
@@ -1403,13 +1400,14 @@
             which then emits the message out to all subscribed clients on the
             Angry channel. The same occurs on the other two channels. The server
             knows which functions are associated with which channels using
-          <code>associations.json</code>.
+            <code>associations.json</code>.
           </p>
           <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <p>
             If you want to teardown your Ekko infrastructure, you can do that
-            with the <code>ekko teardown</code> command. This will tear down your Ekko
-            Infrastructure and all Ekko Functions deployed to AWS Lambda.
+            with the <code>ekko teardown</code> command. This will tear down
+            your Ekko Infrastructure and all Ekko Functions deployed to AWS
+            Lambda.
           </p>
           <p>
             As you can see, deploying your own realtime infrastructure and
@@ -1421,8 +1419,8 @@
           <!-- Section 8 -->
           <h2 id="section-8">8. Engineering Challenges</h2>
           <p>
-            We faced several engineering challenges when building Ekko: how
-            to authenticate clients connecting to our server, how to associate
+            We faced several engineering challenges when building Ekko: how to
+            authenticate clients connecting to our server, how to associate
             individual Ekko Functions with specific realtime channels, and how
             to scale the infrastructure.
           </p>
@@ -1473,17 +1471,18 @@
             channel will receive the processed message.
           </p>
           <p>
-            We created an <code>associations.json</code> file to store these associations
-            between channels and functions.
+            We created an <code>associations.json</code> file to store these
+            associations between channels and functions.
           </p>
           <img class="lazy" data-src="images/diagrams/associationsjson.png" />
           <p>
-          <code>associations.json</code> is organized by application. Each application has
-            an array of channels, and each of those channels contain an array of
-            Ekko Functions to be used for that channel. With this file, the Ekko
-            Server routes messages from a specific channel to the Ekko Functions
-            associated with that channel. Once processed, messages are returned
-            to the Ekko server and emitted to all subscribed clients.
+            <code>associations.json</code> is organized by application. Each
+            application has an array of channels, and each of those channels
+            contain an array of Ekko Functions to be used for that channel. With
+            this file, the Ekko Server routes messages from a specific channel
+            to the Ekko Functions associated with that channel. Once processed,
+            messages are returned to the Ekko server and emitted to all
+            subscribed clients.
           </p>
           <p>
             It’s worth noting that multiple functions can be chained together
@@ -1495,9 +1494,9 @@
           <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <h4 id="section-8-2-2">8.2.2 Storing associations.json</h4>
           <p>
-            The <code>associations.json</code> file is stored in an S3 bucket and the
-            developer is responsible for updating it locally and then uploading
-            it with the Ekko CLI tool.
+            The <code>associations.json</code> file is stored in an S3 bucket
+            and the developer is responsible for updating it locally and then
+            uploading it with the Ekko CLI tool.
           </p>
           <img class="lazy" data-src="images/diagrams/upload.gif" />
           <h4 id="section-8-2-3">8.2.3 Updating associations.json</h4>
@@ -1520,14 +1519,15 @@
           <p>
             The second option was to update the Ekko Server directly at the same
             time that we upload the new JSON file to the S3. This would involve
-            sending a <code>PUT</code> request to the Ekko Server with the JSON object as the
-            payload. We could just add this behind the scenes in our CLI tool
-            when the developer uses the <code>ekko update</code> command. This was the option
-            we chose since it didn’t add any complexity to our infrastructure.
-            The <code>associations.json</code> file is sent as a JSON Web Token, and the code
-            for the <code>PUT</code> route on the server verifies it is a valid token (in
-            addition to decoding it and using that payload as the new
-            function-channel associations data.
+            sending a <code>PUT</code> request to the Ekko Server with the JSON
+            object as the payload. We could just add this behind the scenes in
+            our CLI tool when the developer uses the
+            <code>ekko update</code> command. This was the option we chose since
+            it didn’t add any complexity to our infrastructure. The
+            <code>associations.json</code> file is sent as a JSON Web Token, and
+            the code for the <code>PUT</code> route on the server verifies it is
+            a valid token (in addition to decoding it and using that payload as
+            the new function-channel associations data.
           </p>
           <img
             class="lazy"
@@ -1660,20 +1660,21 @@
             passing through).
           </p>
           <p>
-            When updates are made to the <code>associations.json</code> file, we use the CLI
-            tool to upload these updates to the S3 bucket for storage. We also
-            let the Ekko Server know by sending a <code>PUT</code> request with the new
-            associations data as the payload. In this way, the current server
-            uses the data sent via the <code>PUT</code> request, and new server instances
-            spinning up will use the latest version of the associations data in
-            the S3 bucket.
+            When updates are made to the <code>associations.json</code> file, we
+            use the CLI tool to upload these updates to the S3 bucket for
+            storage. We also let the Ekko Server know by sending a
+            <code>PUT</code> request with the new associations data as the
+            payload. In this way, the current server uses the data sent via the
+            <code>PUT</code> request, and new server instances spinning up will
+            use the latest version of the associations data in the S3 bucket.
           </p>
           <p>
             However, we had a problem. The request will be routed to just one of
             the Ekko Server instances. We need to be able to notify all of the
             Ekko Server instances with the updated data. As you can see from the
-            animation, our <code>PUT</code> request does update one of our server container
-            instances, but this update isn't shared with the others.
+            animation, our <code>PUT</code> request does update one of our
+            server container instances, but this update isn't shared with the
+            others.
           </p>
           <img class="lazy" data-src="images/diagrams/put-fail.gif" />
           <p>
