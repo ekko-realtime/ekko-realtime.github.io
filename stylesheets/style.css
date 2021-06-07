@@ -581,3 +581,7 @@ body {
 #start-here img.lg-screen {
   display: none;
 }
+
+#start-here video {
+  max-width: 100%;
+}
