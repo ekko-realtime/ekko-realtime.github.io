@@ -701,7 +701,7 @@
             3.7 Messaging Pattern: Bi-directional Pub/Sub
           </h3>
           <p>
-            So far we have only seen examples of clients being a publisher or a
+            So far we have only seen examples of clients being a publisher <em>or</em>> a
             subscriber, but within realtime web applications it is very common
             for devices to be <em>both</em> publishers and subscribers.
           </p>
@@ -1276,7 +1276,7 @@
           <h3 id="section-7-1">7.1 Deploying Ekko</h3>
           <p>
             The Ekko Server infrastructure can easily be deployed to AWS by
-            running the ekko init command using the
+            running the <code>ekko init</code> command using the
             <a
               href="https://www.npmjs.com/package/ekko-realtime-cli"
               target="_blank"
@@ -1294,7 +1294,7 @@
           </p>
           <h3 id="section-7-2">7.2 Ekko Infrastructure</h3>
           <img class="lazy" data-src="images/diagrams/infrastructure-1.png" />
-          <p>This is the infrastructure deployed by ekko init.</p>
+          <p>This is the infrastructure deployed by <code>ekko init</code>.</p>
           <p>
             The Ekko Server is a Node application deployed via container to AWS’
             Elastic Container Service (ECS). The Application Load Balancer
@@ -1329,7 +1329,7 @@
           </p>
           <p>
             Retrieving the host and generating JWT values can be done by running
-            the ekko jwt command in the Ekko CLI.
+            the <code>ekko jwt</code> command in the Ekko CLI.
           </p>
           <img class="lazy" data-src="images/diagrams/jwt.png" />
           <p>
@@ -1362,8 +1362,8 @@
           <p>
             To process realtime messages in transit, Ekko Functions need to be
             deployed to AWS Lambda. When the Ekko infrastructure is deployed
-            with the ekko <code>init</code> command, it creates an
-            ekko/ekko_functions directory locally. From this directory,
+            with the <code>ekko init</code> command, it creates an
+          <code>ekko/ekko_functions</code> directory locally. From this directory,
             <code>create</code>, <code>update</code>, <code>deploy</code>, and
             <code>destroy</code> commands can be run to manage Ekko Functions.
           </p>
@@ -1372,21 +1372,21 @@
             so that they can be deployed to AWS Lambda. These functions can be
             as simple as the example below, or a complex program with multiple
             files. In this example, the demo-angry function exists in an
-            index.js file and simply takes the message payload, capitalizes the
+          <code>index.js</code> file and simply takes the message payload, capitalizes the
             text, and adds a few exclamation points.
           </p>
           <img class="lazy" data-src="images/diagrams/angry.png" />
           <p>
             Once Ekko Functions are created, they can easily be deployed to AWS
-            Lambda with the ekko deploy command. After Ekko Functions have been
-            deployed, the associations.json file in the ekko_functions directory
+            Lambda with the <code>ekko deploy</code> command. After Ekko Functions have been
+            deployed, the <code>associations.json</code> file in the <code>ekko_functions</code> directory
             needs to be manually updated.
           </p>
           <img class="lazy" data-src="images/diagrams/associationsjson.png" />
           <p>
-            associations.json informs the server what functions it should use
+          <code>associations.json</code> informs the server what functions it should use
             for processing messages published to a specific channel. Once this
-            file has been updated, the ekko update associations.json command can
+            file has been updated, the <code>ekko update associations.json</code> command can
             be run which stores the file on the S3 bucket mentioned earlier, and
             caches it on the Ekko Server.
           </p>
@@ -1403,12 +1403,12 @@
             which then emits the message out to all subscribed clients on the
             Angry channel. The same occurs on the other two channels. The server
             knows which functions are associated with which channels using
-            associations.json.
+          <code>associations.json</code>.
           </p>
           <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <p>
             If you want to teardown your Ekko infrastructure, you can do that
-            with the ekko teardown command. This will tear down your Ekko
+            with the <code>ekko teardown</code> command. This will tear down your Ekko
             Infrastructure and all Ekko Functions deployed to AWS Lambda.
           </p>
           <p>
@@ -1473,12 +1473,12 @@
             channel will receive the processed message.
           </p>
           <p>
-            We created an associations.json file to store these associations
+            We created an <code>associations.json</code> file to store these associations
             between channels and functions.
           </p>
           <img class="lazy" data-src="images/diagrams/associationsjson.png" />
           <p>
-            associations.json is organized by application. Each application has
+          <code>associations.json</code> is organized by application. Each application has
             an array of channels, and each of those channels contain an array of
             Ekko Functions to be used for that channel. With this file, the Ekko
             Server routes messages from a specific channel to the Ekko Functions
@@ -1495,7 +1495,7 @@
           <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <h4 id="section-8-2-2">8.2.2 Storing associations.json</h4>
           <p>
-            The associations.json file is stored in an S3 bucket and the
+            The <code>associations.json</code> file is stored in an S3 bucket and the
             developer is responsible for updating it locally and then uploading
             it with the Ekko CLI tool.
           </p>
@@ -1520,12 +1520,12 @@
           <p>
             The second option was to update the Ekko Server directly at the same
             time that we upload the new JSON file to the S3. This would involve
-            sending a PUT request to the Ekko Server with the JSON object as the
+            sending a <code>PUT</code> request to the Ekko Server with the JSON object as the
             payload. We could just add this behind the scenes in our CLI tool
-            when the developer uses the ekko update command. This was the option
+            when the developer uses the <code>ekko update</code> command. This was the option
             we chose since it didn’t add any complexity to our infrastructure.
-            The associations.json file is sent as a JSON Web Token, and the code
-            for the PUT route on the server verifies it is a valid token (in
+            The <code>associations.json</code> file is sent as a JSON Web Token, and the code
+            for the <code>PUT</code> route on the server verifies it is a valid token (in
             addition to decoding it and using that payload as the new
             function-channel associations data.
           </p>
@@ -1660,11 +1660,11 @@
             passing through).
           </p>
           <p>
-            When updates are made to the associations.json file, we use the CLI
+            When updates are made to the <code>associations.json</code> file, we use the CLI
             tool to upload these updates to the S3 bucket for storage. We also
-            let the Ekko Server know by sending a PUT request with the new
+            let the Ekko Server know by sending a <code>PUT</code> request with the new
             associations data as the payload. In this way, the current server
-            uses the data sent via the PUT request, and new server instances
+            uses the data sent via the <code>PUT</code> request, and new server instances
             spinning up will use the latest version of the associations data in
             the S3 bucket.
           </p>
@@ -1672,7 +1672,7 @@
             However, we had a problem. The request will be routed to just one of
             the Ekko Server instances. We need to be able to notify all of the
             Ekko Server instances with the updated data. As you can see from the
-            animation, our PUT request does update one of our server container
+            animation, our <code>PUT</code> request does update one of our server container
             instances, but this update isn't shared with the others.
           </p>
           <img class="lazy" data-src="images/diagrams/put-fail.gif" />
