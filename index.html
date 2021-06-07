@@ -817,7 +817,7 @@
             Now, the only option is to horizontally scale the realtime service.
           </p>
           <p>
-            A horizontally scaled realtime service introduces new problems as a
+            A horizontally-scaled realtime service introduces new problems as a
             result of WebSocket connections now being distributed across
             multiple server instances. (We will explain more about these
             challenges later.)
@@ -1018,7 +1018,7 @@
             have European users and want to translate messages from both apps to
             several European languages. This developer also plans on building
             more realtime apps in the future, with either completely new
-            features and/or possibly reusing previously created middleware.
+            features and/or possibly reusing previously-created middleware.
           </p>
           <img class="lazy" data-src="images/diagrams/middleware-reuse.gif" />
           <p>
@@ -1042,7 +1042,7 @@
           </ol>
           <img class="lazy" data-src="images/diagrams/middleware-where-1.png" />
           The first option, putting realtime middleware in client-side code, is
-          a nonstarter. Putting business logic in client-side code is not a good
+          a non-starter. Putting business logic in client-side code is not a good
           practice because it introduces performance problems and security
           concerns. In the
           <a
@@ -1405,7 +1405,7 @@
             knows which functions are associated with which channels using
             associations.json.
           </p>
-          <img src="PLACEHOLDER WIDGET" />
+          <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <p>
             If you want to teardown your Ekko infrastructure, you can do that
             with the ekko teardown command. This will tear down your Ekko
@@ -1492,7 +1492,7 @@
             subscribers.
           </p>
           <img class="lazy" data-src="images/diagrams/chaining.gif" />
-          <img src="PLACEHOLDER WIDGET" />
+          <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <h4 id="section-8-2-2">8.2.2 Storing associations.json</h4>
           <p>
             The associations.json file is stored in an S3 bucket and the
@@ -1548,7 +1548,7 @@
           <p>
             Most of our scaling needs were handled by the choices we made when
             deploying our infrastructure to AWS. We used AWS' Cloud Development
-            Toolkit (CDK) which synthesises CloudFormation templates and then
+            Toolkit (CDK) which synthesizes CloudFormation templates and then
             deploys those constructs to AWS.
           </p>
           <img class="lazy" data-src="images/diagrams/cdk.png" />
@@ -1599,7 +1599,7 @@
             WebSocket connections.
           </p>
           <p>
-            Socket.io makes one request to set a connection ID, and a subsequent
+            Socket.IO makes one request to set a connection ID, and a subsequent
             upgrade request to establish the long lived WebSocket connection.
             These two requests must go to the same backend process, but by
             default our load balancer — AWS' Application Load Balancer — may
@@ -1735,7 +1735,7 @@
             data being published back out to the connected devices from the
             server.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-2.png" />
+          <img class="lazy" data-src="images/diagrams/loadtest-4.png" />
           <p>
             In this test, we established 50,000 concurrent WebSocket
             connections. Each connection published one message per minute for
@@ -1754,7 +1754,7 @@
             the same channel. Each connection sent 10 messages over the course
             of a minute, for a total of 3,000 published messages.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-3.png" />
+          <img class="lazy" data-src="images/diagrams/loadtest-2.png" />
           <p>
             Ekko Server was able to handle this without issues, only reaching
             15% of its maximum CPU usage at peak. When we ran the same test with
@@ -1765,7 +1765,7 @@
             900,000 messages sent from the server. In the second test, it had to
             send 9000 messages to 900 clients, totaling 8,100,000 messages.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-4.png" />
+          <img class="lazy" data-src="images/diagrams/loadtest-3.png" />
           <p>
             Seeing how quickly load was increasing with additional connected
             clients, we thought more about our use case. If you consider a chat
