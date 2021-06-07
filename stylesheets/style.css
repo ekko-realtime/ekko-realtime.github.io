@@ -447,7 +447,7 @@ body {
   height: calc(100vh - 4rem);
   margin: 0 auto;
   max-height: 304px;
-  max-width: 540px;
+  max-width: calc(100% - 2rem);
   width: 100%;
 }
 
