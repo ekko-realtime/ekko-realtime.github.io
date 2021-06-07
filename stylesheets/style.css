@@ -156,6 +156,7 @@ body {
   padding: 0.25rem 0;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 #mobile-menu > * + * {
@@ -299,21 +300,25 @@ body {
   padding: 4rem 1rem;
 }
 
-#case-study-content h2::before,
-#case-study-content h1::before,
-#case-study-content h3::before {
+#case-study-content .prose h1::before,
+#case-study-content .prose h2::before,
+#case-study-content .prose h3::before,
+#case-study-content .prose h4::before {
   display: block;
   content: " ";
-  margin-top: -8rem;
-  height: 8rem;
+  margin-top: -6rem;
+  height: 6rem;
   visibility: hidden;
+  /* background-color: rgba(0, 0, 0, 0.1); */
   pointer-events: none;
 }
 
 .prose h1,
 .prose h2,
-.prose h3 {
+.prose h3,
+.prose h4 {
   color: var(--ekko-blue);
+  margin-top: 3rem;
 }
 
 .prose a {

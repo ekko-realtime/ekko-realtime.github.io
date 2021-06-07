@@ -135,7 +135,7 @@ const handleTocSelection = () => {
     if (!link.hash) continue;
     const target = document.querySelector(link.hash);
 
-    if (!!target && target.offsetTop <= window.scrollY) {
+    if (!!target && target.offsetTop <= window.scrollY + 16 * 2) {
       clearSelectedToc();
       selectTocItem(link, target);
 
