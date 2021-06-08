@@ -296,6 +296,10 @@ body {
   max-width: 100%;
 }
 
+#case-study-content video {
+  max-width: 100%;
+}
+
 #case-study-content > div {
   padding: 4rem 1rem;
 }
@@ -572,7 +576,7 @@ body {
   color: var(--white);
 }
 
-#start-here img.pad {
+#start-here video.pad {
   background-color: var(--white);
   border-radius: 0.5rem;
   padding: 2rem;

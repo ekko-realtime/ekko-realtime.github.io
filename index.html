@@ -163,10 +163,6 @@
             Ekko abstracts away the complexity of working with cloud
             infrastructure by automating the deployment process.
           </p>
-          <!-- <img
-            style="margin-bottom: -3rem"
-            src="images/diagrams/cli-deploy.png"
-          /> -->
           <video autoplay loop muted playsinline>
             <source src="images/ekko-deploy-teal.mp4" type="video/mp4" />
             Your browser does not support the HTML5 Video element.
@@ -183,7 +179,13 @@
             Ekko Functions are serverless functions that can be customized for
             your realtime needs and reused across applications.
           </p>
-          <img class="pad" src="images/diagrams/infrastructure-3.gif" />
+
+          <video autoplay loop muted playsinline class="pad">
+            <source
+              src="images/diagrams/infrastructure-3.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
     </div>
@@ -522,10 +524,7 @@
             Realtime web applications, or realtime components within bigger
             monolithic applications, are everywhere.
           </p>
-          <img
-            class="lazy"
-            data-src="images/diagrams/realtime-is-everywhere.png"
-          />
+          <img src="images/diagrams/realtime-is-everywhere.png" />
           <p>
             Any live data dashboards, such as stock prices ticking up and down
             on a website, are examples of realtime web applications. The same
@@ -560,7 +559,13 @@
               >Robert Miller’s 1968 paper</a
             >, "Response time in man-computer conversational transactions”.)
           </p>
-          <img class="lazy" data-src="images/diagrams/what-is-realtime.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/what-is-realtime.mp4"
+              type="video/mp4"
+            />
+          </video>
           <p>
             As one of the leading service providers in the realtime space,
             PubNub,
@@ -604,7 +609,10 @@
             At the bedrock of web communication we have traditional HTTP request
             response cycles, and along with it the idea of pulling data.
           </p>
-          <img class="lazy" data-src="images/diagrams/data-pull.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/data-pull.mp4" type="video/mp4" />
+          </video>
           <p>
             When you pull data, you have data that lives in a database
             somewhere. This data isn’t retrieved until a client explicitly makes
@@ -618,7 +626,10 @@
 
           <h3 id="section-3-2">3.2 Data Transfer Patterns: Pushing Data</h3>
           <p>The pull pattern is distinct from the push pattern.</p>
-          <img class="lazy" data-src="images/diagrams/data-push.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/data-push.mp4" type="video/mp4" />
+          </video>
           <p>
             In the data push pattern, the client often starts with an initial
             request but it keeps that connection open. Now whenever new data is
@@ -646,7 +657,10 @@
             ‘subscribers’, and the pattern is focused specifically on their
             actual roles in the interaction.
           </p>
-          <img class="lazy" data-src="images/diagrams/pubsub-1.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/pubsub-1.mp4" type="video/mp4" />
+          </video>
           <p>
             We represent them both as browsers on iPads, but the actual hardware
             doesn’t really matter. Anything that was traditionally a server or a
@@ -666,7 +680,10 @@
             that the Pub/Sub model can also be used for one to many messaging.
           </p>
           <h3 id="section-3-4">3.4 Messaging Pattern: 1:M Pub/Sub</h3>
-          <img class="lazy" data-src="images/diagrams/pubsub-2.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/pubsub-2.mp4" type="video/mp4" />
+          </video>
           <p>
             With this new pattern, we still have a single publisher on the left,
             but now we have three subscribers on the right. Whenever the
@@ -678,7 +695,7 @@
             messaging pattern.
           </p>
           <h3 id="section-3-5">3.5 Messaging Pattern: M:M Pub/Sub</h3>
-          <img class="lazy" data-src="images/diagrams/pubsub-3.png" />
+          <img src="images/diagrams/pubsub-3.png" />
           <p>
             Looking at this diagram, it is easy to see how things can get
             complicated very quickly. There are peer-to-peer protocols that are
@@ -692,7 +709,10 @@
             With this pattern, each of the publishers and subscribers have a
             single realtime connection to the central hub.
           </p>
-          <img class="lazy" data-src="images/diagrams/pubsub-4.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/pubsub-4.mp4" type="video/mp4" />
+          </video>
           <p>
             When a publisher sends a message it goes to the hub and then it is
             emitted to all relevant subscribers.
@@ -710,7 +730,10 @@
             very common for devices to be <em>both</em> publishers and
             subscribers.
           </p>
-          <img class="lazy" data-src="images/diagrams/pubsub-5.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/pubsub-5.mp4" type="video/mp4" />
+          </video>
           <p>
             If we take the common use case of a chat application, a user is a
             publisher whenever they send messages, and a subscriber when they
@@ -731,7 +754,7 @@
             many publishers and subscribers, WebSockets is the logical, and most
             common choice.
           </p>
-          <img class="lazy" data-src="images/diagrams/protocols.png" />
+          <img src="images/diagrams/protocols.png" />
           <p>
             The need for bi-directional communication rules out the HTTP
             options; there are some (hacky) workarounds to get these to simulate
@@ -777,11 +800,14 @@
             message load will become too great and (potentially) cause the app
             server to crash.
           </p>
-          <img
-            class="lazy"
-            data-src="images/diagrams/separate-realtime-1.gif"
-            width="270"
-          />
+
+          <video autoplay loop muted playsinline style="width: 270px">
+            <source
+              src="images/diagrams/separate-realtime-1.mp4"
+              type="video/mp4"
+            />
+          </video>
+
           <p>
             The initial response might be to vertically scale, adding more
             compute power to the app server. This works, up to a point, but it
@@ -790,11 +816,14 @@
             Therefore, they should be treated as two separate services -- with
             different compute needs -- that exist on two different servers.
           </p>
-          <img
-            class="lazy"
-            data-src="images/diagrams/separate-realtime-2.gif"
-            width="570"
-          />
+
+          <video autoplay loop muted playsinline style="width: 570px">
+            <source
+              src="images/diagrams/separate-realtime-2.mp4"
+              type="video/mp4"
+            />
+          </video>
+
           <p>
             Treating realtime as a separate service becomes increasingly
             important when building multiple realtime applications. If realtime
@@ -803,7 +832,7 @@
             service on the other hand, can manage the realtime messages for both
             applications, without the need for redundant code.
           </p>
-          <img class="lazy" data-src="images/diagrams/realtime-service.png" />
+          <img src="images/diagrams/realtime-service.png" />
           <p>
             When realtime applications become more popular, the realtime
             management component may need to scale at a different rate than the
@@ -851,7 +880,7 @@
             </li>
           </ul>
           <h3 id="section-4-1">4.1 Existing Solutions</h3>
-          <img class="lazy" data-src="images/diagrams/brands.png" />
+          <img src="images/diagrams/brands.png" />
           <p>
             Companies like
             <a href="https://www.pubnub.com" target="_blank">PubNub</a>,
@@ -910,10 +939,7 @@
             <li>Responding to messages with chat bots</li>
             <li>Sending alerts, given a particular trigger / condition</li>
           </ul>
-          <img
-            class="lazy"
-            data-src="images/diagrams/realtime-categories.png"
-          />
+          <img src="images/diagrams/realtime-categories.png" />
           <p>
             Some real-world examples of this middleware being used for specific
             services include:
@@ -972,7 +998,13 @@
             >
             emerge with how their customers were using their services.
           </p>
-          <img class="lazy" data-src="images/diagrams/recognized-need.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/recognized-need.mp4"
+              type="video/mp4"
+            />
+          </video>
           <p>
             Recall that PubNub and Ably’s services allow customers to decouple
             their application infrastructure from their realtime infrastructure
@@ -1021,7 +1053,13 @@
             more realtime apps in the future, with either completely new
             features and/or possibly reusing previously-created middleware.
           </p>
-          <img class="lazy" data-src="images/diagrams/middleware-reuse.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/middleware-reuse.mp4"
+              type="video/mp4"
+            />
+          </video>
           <p>
             It is helpful to think of these realtime middlewares as separate
             services. In the above example, there is a profanity filter service,
@@ -1030,7 +1068,13 @@
             processing, but needs to be able to scale up and down,
             independently, on demand.
           </p>
-          <img class="lazy" data-src="images/diagrams/middleware-scaling.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/middleware-scaling.mp4"
+              type="video/mp4"
+            />
+          </video>
           <p>
             There are four places that a realtime infrastructure-as-a-service
             provider could put realtime middleware:
@@ -1041,7 +1085,7 @@
             <li>On a dedicated server for realtime middleware</li>
             <li>In Serverless Functions</li>
           </ol>
-          <img class="lazy" data-src="images/diagrams/middleware-where-1.png" />
+          <img src="images/diagrams/middleware-where-1.png" />
           The first option, putting realtime middleware in client-side code, is
           a non-starter. Putting business logic in client-side code is not a
           good practice because it introduces performance problems and security
@@ -1058,7 +1102,7 @@
             those things are hackable and crackable. You want it to store your
             business logic in a place that it just can't be tampered with.”
           </blockquote>
-          <img class="lazy" data-src="images/diagrams/middleware-where-2.png" />
+          <img src="images/diagrams/middleware-where-2.png" />
           <p>
             The second option of putting realtime middleware on the realtime
             server doesn’t work either. This is because it is not feasible to
@@ -1091,7 +1135,7 @@
               not necessarily scale in the same way or at the same time.
             </li>
           </ul>
-          <img class="lazy" data-src="images/diagrams/middleware-where-3.png" />
+          <img src="images/diagrams/middleware-where-3.png" />
           <p>
             The third option, to put realtime middleware on a dedicated message
             processing server wouldn’t be an ideal solution either. Although
@@ -1101,7 +1145,7 @@
             its own modular service with different scaling needs, it doesn’t
             make sense to put them all on the same server.
           </p>
-          <img class="lazy" data-src="images/diagrams/middleware-where-4.png" />
+          <img src="images/diagrams/middleware-where-4.png" />
           <p>
             The last option, serverless functions, is a perfect fit for realtime
             middleware because it is secure, modular, and easy for developers to
@@ -1126,10 +1170,7 @@
               what you use.
             </li>
           </ol>
-          <img
-            class="lazy"
-            data-src="images/diagrams/serverless-functions.png"
-          />
+          <img src="images/diagrams/serverless-functions.png" />
           <p>
             These properties make them ideal for the purposes of realtime
             middleware. With serverless functions, developers can easily create
@@ -1159,7 +1200,7 @@
             realtime middleware for their customers, they did so in very
             different ways.
           </p>
-          <img class="lazy" data-src="images/diagrams/existing-solutions.png" />
+          <img src="images/diagrams/existing-solutions.png" />
           <p>
             PubNub created
             <a href="https://www.pubnub.com/features/functions/" target="_blank"
@@ -1213,7 +1254,7 @@
             main options: a third-party service, an open-source solution, or
             do-it-yourself. The right choice depends on the specific use case.
           </p>
-          <img class="lazy" data-src="images/diagrams/current-options.png" />
+          <img src="images/diagrams/current-options.png" />
           <p>
             If easy setup is most important, it’s probably best to go with a
             third-party solution. There are good open-source solutions, but the
@@ -1251,7 +1292,7 @@
             <li>Ekko CLI</li>
             <li>Ekko Client</li>
           </ul>
-          <img class="lazy" data-src="images/diagrams/parts.png" />
+          <img src="images/diagrams/parts.png" />
           <p>
             The Ekko Server manages realtime messages for applications with many
             publishers and subscribers. It facilitates the processing of
@@ -1284,17 +1325,14 @@
               >Ekko CLI tool</a
             >.
           </p>
-          <img
-            class="lazy"
-            data-src="images/diagrams/cli-deploy-no-shadow.png"
-          />
+          <img src="images/diagrams/cli-deploy-no-shadow.png" />
           <p>
             The Ekko CLI prompts for AWS credentials and uses those, along with
             AWS’ Cloud Development Kit (CDK), to deploy the Ekko infrastructure
             to AWS.
           </p>
           <h3 id="section-7-2">7.2 Ekko Infrastructure</h3>
-          <img class="lazy" data-src="images/diagrams/infrastructure-1.png" />
+          <img src="images/diagrams/infrastructure-1.png" />
           <p>This is the infrastructure deployed by <code>ekko init</code>.</p>
           <p>
             The Ekko Server is a Node application deployed via container to AWS’
@@ -1316,7 +1354,7 @@
             Once Ekko Client is installed, it can be used to create a new Ekko
             Client instance.
           </p>
-          <img class="lazy" data-src="images/diagrams/ekko-instance.png" />
+          <img src="images/diagrams/ekko-instance.png" />
           <p>
             This Ekko Client Instance allows an application to connect, and send
             realtime messages to the Ekko Server. Ekko Client takes a handful of
@@ -1332,7 +1370,7 @@
             Retrieving the host and generating JWT values can be done by running
             the <code>ekko jwt</code> command in the Ekko CLI.
           </p>
-          <img class="lazy" data-src="images/diagrams/jwt.png" />
+          <img src="images/diagrams/jwt.png" />
           <p>
             The Ekko Server endpoint is retrieved by the CLI from a local
             environment variable that is generated when the Ekko infrastructure
@@ -1358,7 +1396,13 @@
             Ekko Server, subscribed to the same channel, publishing messages on
             it.
           </p>
-          <img class="lazy" data-src="images/diagrams/infrastructure-2.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/infrastructure-2.mp4"
+              type="video/mp4"
+            />
+          </video>
           <h3 id="section-7-4">7.4 Deploying Ekko Functions</h3>
           <p>
             To process realtime messages in transit, Ekko Functions need to be
@@ -1377,7 +1421,7 @@
             <code>index.js</code> file and simply takes the message payload,
             capitalizes the text, and adds a few exclamation points.
           </p>
-          <img class="lazy" data-src="images/diagrams/angry.png" />
+          <img src="images/diagrams/angry.png" />
           <p>
             Once Ekko Functions are created, they can easily be deployed to AWS
             Lambda with the <code>ekko deploy</code> command. After Ekko
@@ -1385,7 +1429,7 @@
             <code>associations.json</code> file in the
             <code>ekko_functions</code> directory needs to be manually updated.
           </p>
-          <img class="lazy" data-src="images/diagrams/associationsjson.png" />
+          <img src="images/diagrams/associationsjson.png" />
           <p>
             <code>associations.json</code> informs the server what functions it
             should use for processing messages published to a specific channel.
@@ -1399,7 +1443,13 @@
             After creating and deploying Ekko Functions, this is what the Ekko
             infrastructure and message processing flow looks like:
           </p>
-          <img class="lazy" data-src="images/diagrams/infrastructure-3b.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/infrastructure-3b.mp4"
+              type="video/mp4"
+            />
+          </video>
           <p>
             Now, when a client sends a message on the Angry channel, the server
             forwards that message on to the Angry Lambda for processing. The
@@ -1440,7 +1490,10 @@
             Server endpoint. But the problem with this is that anyone can send
             messages to this public endpoint, including bad actors.
           </p>
-          <img class="lazy" data-src="images/diagrams/bad-actor-1.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/bad-actor-1.mp4" type="video/mp4" />
+          </video>
           <p>
             To validate Ekko Clients, we decided to use JSON Web Tokens (JWTs).
             These are essentially API keys that can have a JSON object encoded
@@ -1453,7 +1506,10 @@
             uses the same secret to authenticate JWTs and only allows clients
             with a valid JWT to connect to it.
           </p>
-          <img class="lazy" data-src="images/diagrams/bad-actor-2.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/bad-actor-2.mp4" type="video/mp4" />
+          </video>
           <p>
             Since we can encode data into the JWT, we used it to specify if the
             connecting client was an admin or a normal user, and what app they
@@ -1468,7 +1524,10 @@
             messages needed to be processed by which functions?
           </p>
           <h4 id="section-8-2-1">8.2.1 Linking Ekko Functions with Messages</h4>
-          <img class="lazy" data-src="images/diagrams/linking.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/linking.mp4" type="video/mp4" />
+          </video>
           <p>
             Since clients publish and subscribe to channels, it made sense to
             link specific channels with specific Ekko functions. So if you’re
@@ -1481,7 +1540,7 @@
             We created an <code>associations.json</code> file to store these
             associations between channels and functions.
           </p>
-          <img class="lazy" data-src="images/diagrams/associationsjson.png" />
+          <img src="images/diagrams/associationsjson.png" />
           <p>
             <code>associations.json</code> is organized by application. Each
             application has an array of channels, and each of those channels
@@ -1497,7 +1556,10 @@
             order, before emitting the processed message back out to
             subscribers.
           </p>
-          <img class="lazy" data-src="images/diagrams/chaining.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/chaining.mp4" type="video/mp4" />
+          </video>
           <!-- <img src="PLACEHOLDER WIDGET" /> -->
           <h4 id="section-8-2-2">8.2.2 Storing associations.json</h4>
           <p>
@@ -1505,7 +1567,10 @@
             and the developer is responsible for updating it locally and then
             uploading it with the Ekko CLI tool.
           </p>
-          <img class="lazy" data-src="images/diagrams/upload.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/upload.mp4" type="video/mp4" />
+          </video>
           <h4 id="section-8-2-3">8.2.3 Updating associations.json</h4>
           <p>
             We opted to cache the associations data on the server since we want
@@ -1519,10 +1584,14 @@
             through Simple Notification Service (SNS), another AWS service,
             every time the S3 bucket registered an upload event.
           </p>
-          <img
-            class="lazy"
-            data-src="images/diagrams/updating-associations-cloudwatch.gif"
-          />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/updating-associations-cloudwatch.mp4"
+              type="video/mp4"
+            />
+          </video>
+
           <p>
             The second option was to update the Ekko Server directly at the same
             time that we upload the new JSON file to the S3. This would involve
@@ -1536,10 +1605,14 @@
             a valid token (in addition to decoding it and using that payload as
             the new function-channel associations data.
           </p>
-          <img
-            class="lazy"
-            data-src="images/diagrams/updating-associations-put.gif"
-          />
+
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/diagrams/updating-associations-put.mp4"
+              type="video/mp4"
+            />
+          </video>
+
           <h3 id="section-8-3">8.3 Scaling Ekko</h3>
           <p>
             The final engineering challenge we needed to handle was around
@@ -1558,7 +1631,7 @@
             Toolkit (CDK) which synthesizes CloudFormation templates and then
             deploys those constructs to AWS.
           </p>
-          <img class="lazy" data-src="images/diagrams/cdk.png" />
+          <img src="images/diagrams/cdk.png" />
           <p>
             We didn't want to have to deploy our scalable infrastructure
             manually, using the AWS web interface. Options available to us
@@ -1590,7 +1663,7 @@
             'tasks' up and down according to how taxed the particular task
             instance became.
           </p>
-          <img class="lazy" data-src="images/diagrams/scaling.png" />
+          <img src="images/diagrams/scaling.png" />
           <p>
             Fargate scales according to rules defined to account for how much
             CPU and memory each container instance is using. We can specify
@@ -1613,7 +1686,10 @@
             send the two requests to different Fargate container instances, so
             the connection may not be successful.
           </p>
-          <img class="lazy" data-src="images/diagrams/ws-fail.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/ws-fail.mp4" type="video/mp4" />
+          </video>
           <p>
             When we first tried out Ekko on AWS infrastructure we could not
             establish WebSocket connections for this reason.
@@ -1625,7 +1701,10 @@
             instance to which it was initially assigned and WebSocket
             connections work as they should.
           </p>
-          <img class="lazy" data-src="images/diagrams/ws-work.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/ws-work.mp4" type="video/mp4" />
+          </video>
           <h4 id="section-8-3-4">8.3.4 Scaling WebSocket Connections</h4>
           <p>
             Once our infrastructure was deployed, we wanted to make sure our
@@ -1635,7 +1714,10 @@
             being published on the various other instances?
           </p>
           <p>This animation illustrates the problem of scaling WebSockets:</p>
-          <img class="lazy" data-src="images/diagrams/ws-problem.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/ws-problem.mp4" type="video/mp4" />
+          </video>
           <p>
             If we have two instances of the Ekko server, the load balancer is
             going to connect one user to server instance A and the other to
@@ -1652,7 +1734,10 @@
             library. This library uses a Redis instance to broadcast events to
             all of the Socket.IO server nodes.
           </p>
-          <img class="lazy" data-src="images/diagrams/ws-solution.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/ws-solution.mp4" type="video/mp4" />
+          </video>
           <p>
             Alice’s message, published to server node A, is automatically
             published to server node B and emitted out to all subscribers.
@@ -1683,7 +1768,10 @@
             server container instances, but this update isn't shared with the
             others.
           </p>
-          <img class="lazy" data-src="images/diagrams/put-fail.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/put-fail.mp4" type="video/mp4" />
+          </video>
           <p>
             Our solution to this was to use the standard Redis package. The
             server that receives the message publishes the file to the Redis /
@@ -1692,7 +1780,10 @@
             associations data. This allowed us to keep our server instances
             synchronised.
           </p>
-          <img class="lazy" data-src="images/diagrams/put-work.gif" />
+
+          <video autoplay loop muted playsinline>
+            <source src="images/diagrams/put-work.mp4" type="video/mp4" />
+          </video>
           <p>
             Solving these various engineering challenges allowed us to build
             Ekko out such that it was working as we hoped, and it was also able
@@ -1733,7 +1824,7 @@
             almost certainly be modified to remove this limit, we decided that
             65,000 connections was enough for our use case.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-1.png" />
+          <img src="images/diagrams/loadtest-1.png" />
           <p>
             Next, we wanted to test a common use case for a realtime message
             processing service: many connected devices sending messages to a
@@ -1743,7 +1834,7 @@
             data being published back out to the connected devices from the
             server.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-4.png" />
+          <img src="images/diagrams/loadtest-4.png" />
           <p>
             In this test, we established 50,000 concurrent WebSocket
             connections. Each connection published one message per minute for
@@ -1762,7 +1853,7 @@
             the same channel. Each connection sent 10 messages over the course
             of a minute, for a total of 3,000 published messages.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-2.png" />
+          <img src="images/diagrams/loadtest-2.png" />
           <p>
             Ekko Server was able to handle this without issues, only reaching
             15% of its maximum CPU usage at peak. When we ran the same test with
@@ -1773,7 +1864,7 @@
             900,000 messages sent from the server. In the second test, it had to
             send 9000 messages to 900 clients, totaling 8,100,000 messages.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-3.png" />
+          <img src="images/diagrams/loadtest-3.png" />
           <p>
             Seeing how quickly load was increasing with additional connected
             clients, we thought more about our use case. If you consider a chat
@@ -1791,7 +1882,7 @@
             more than enough to justify the chat app use case and Ekko Server
             only reached 50% CPU usage so we remained within reasonable ranges.
           </p>
-          <img class="lazy" data-src="images/diagrams/loadtest-5.png" />
+          <img src="images/diagrams/loadtest-5.png" />
           <p>
             During our tests, ECS did scale up Ekko Server instances according
             to the scaling policies defined by our CDK code. However, it became
@@ -1877,13 +1968,13 @@
             realtime infrastructure and in-transit message processing to web
             applications.
           </p>
-          <img class="lazy" data-src="images/diagrams/infrastructure.png" />
+          <img src="images/diagrams/infrastructure.png" />
           <p>
             We hope you have seen how flexible Ekko is to work with. The
             possibilities available to you are many, as you can see from some of
             the following examples.
           </p>
-          <img class="lazy" data-src="images/diagrams/options.png" />
+          <img src="images/diagrams/options.png" />
           <p>
             The combination of a realtime server with serverless functions as a
             kind of middleware for in-transit processing of messages offers a
@@ -1921,7 +2012,7 @@
             <li class="profile">
               <img
                 class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 lazy"
-                data-src="images/team/as.jpg"
+                src="images/team/as.jpg"
                 alt=""
               />
               <div>
@@ -1960,7 +2051,7 @@
             <li class="profile">
               <img
                 class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 lazy"
-                data-src="images/team/dm.jpg"
+                src="images/team/dm.jpg"
                 alt=""
               />
               <div>
@@ -1999,7 +2090,7 @@
             <li class="profile">
               <img
                 class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 lazy"
-                data-src="images/team/dh.jpg"
+                src="images/team/dh.jpg"
                 alt=""
               />
               <div>
@@ -2038,7 +2129,7 @@
             <li class="profile">
               <img
                 class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 lazy"
-                data-src="images/team/wl.jpg"
+                src="images/team/wl.jpg"
                 alt=""
               />
               <div>
